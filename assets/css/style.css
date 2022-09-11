@@ -7,11 +7,13 @@ body {
 
 .start-button,
 .info-box,
-.quiz-box {
+.quiz-box,
+.result-box {
   position: absolute;
   top: 20%;
   left: 30%;
   transform: translate (-50%, -50%);
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 19);
 }
 
 /* start button  */
@@ -31,7 +33,9 @@ body {
   width: 540px;
   background: white;
   border-radius: 10px;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .info-box .info-title {
@@ -40,6 +44,7 @@ body {
   border-bottom: 1px solid lightgrey;
   display: flex;
   align-items: center;
+  padding: 0 30px;
   font-size: 20px;
   font-weight: 600;
 }
@@ -98,6 +103,9 @@ body {
   height: 700px;
   background: white;
   border-radius: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .quiz-box header {
@@ -246,4 +254,61 @@ footer .next-button {
 
 footer .next-button:hover {
   background: rgb(70, 184, 70);
+}
+
+.result-box {
+  background: white;
+  width: 450px;
+  padding: 25px 30px;
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.result-box .icon {
+  font-size: 100px;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.result-box .complete-text {
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.result-box .score-text span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.score-text span p {
+  font-weight: 500;
+  padding: 0 4px;
+}
+
+.result-box .buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.result-box .buttons button {
+  margin: 0 10px;
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid green;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
