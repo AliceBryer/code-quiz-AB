@@ -6,7 +6,8 @@ body {
 /* start button container styling */
 
 .start-button,
-.info-box {
+.info-box,
+.quiz-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,4 +88,59 @@ body {
 .buttons button.quit:hover {
   background: rgb(81, 17, 17);
   color: white;
+}
+
+/* quiz box styling */
+
+.quiz-box {
+  width: 550px;
+  background: white;
+  border-radius: 30px;
+}
+
+.quiz-box header {
+  height: 70px;
+  padding: 0 30px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 3px 5px 1px rgb(0, 0, 0, 0.2);
+}
+
+.quiz-box header .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.quiz-box header .timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+  height: 45px;
+  background: grey;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  padding: 0 8px;
+}
+
+.quiz-box header .timer .time-text {
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+
+.quiz-box header .timer .timer-sec {
+  font-size: 18px;
+  font-weight: 500px;
+  background: rgb(146, 79, 79);
+  height: 30px;
+  width: 45px;
+  color: aliceblue;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 1px solid;
+  user-select: none;
 }
