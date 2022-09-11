@@ -93,6 +93,7 @@ body {
 /* quiz box styling */
 
 .quiz-box {
+  display: none;
   width: 750px;
   height: 700px;
   background: white;
@@ -203,4 +204,46 @@ section .option-list .option:hover {
 
 .option-list .option .icon-cross {
   color: rgb(121, 3, 3);
+}
+
+.quiz-box footer {
+  height: 60px;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quiz-box footer .total-question span {
+  display: flex;
+  user-select: none;
+}
+
+footer .total-question span p {
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+footer .total-question span p:first-child {
+  padding-left: 0px;
+}
+
+footer .next-button {
+  height: 40px;
+  padding: 0 13px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(2, 54, 2);
+  border-radius: 5px;
+  border: 1px solid blue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer .next-button:hover {
+  background: rgb(70, 184, 70);
 }
