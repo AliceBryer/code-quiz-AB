@@ -11,7 +11,7 @@ const timer = document.querySelector("header .timer");
 const timeText = document.querySelector(".timer .time-txt");
 const timeCount = document.querySelector(".timer .timer-sec");
 
-//  Start quix button clicked
+//  Start quiz button clicked
 
 startButton.onclick = () => {
   infoBox.classList.add("activeInfo");
