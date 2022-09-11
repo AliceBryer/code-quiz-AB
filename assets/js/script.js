@@ -28,4 +28,13 @@ exitButton.onclick = () => {
 continueButton.onclick = () => {
   infoBox.classList.remove("activeInfo");
   quizBox.classList.add("activeQuiz");
+  showQuestions();
 };
+
+let queCount = 0;
+
+function showQuestions() {
+  const queText = document.querySelector(".que-text");
+  let queTag = "<span" + questions[0].question + "</span>";
+  queText.innerHTML = queTag;
+}
