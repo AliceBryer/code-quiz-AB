@@ -9,8 +9,8 @@ body {
 .info-box,
 .quiz-box {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 30%;
   transform: translate (-50%, -50%);
 }
 
@@ -93,12 +93,15 @@ body {
 /* quiz box styling */
 
 .quiz-box {
-  width: 550px;
+  width: 750px;
+  height: 700px;
   background: white;
   border-radius: 30px;
 }
 
 .quiz-box header {
+  position: relative;
+  z-index: 99;
   height: 70px;
   padding: 0 30px;
   background: white;
@@ -143,4 +146,61 @@ body {
   border-radius: 5px;
   border: 1px solid;
   user-select: none;
+}
+
+.quiz-box section {
+  padding: 25px 30px 20px 30px;
+  background: white;
+}
+
+.quiz-box section .que-text {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.quiz-box section .option-list {
+  padding: 20px 0;
+  display: block;
+}
+
+section .option-list .option {
+  background: aliceblue;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+section .option-list .option:hover {
+  color: blue;
+  background: lightblue;
+  border-color: black;
+}
+
+.option-list .option:last-child {
+  margin-bottom: 0px;
+}
+
+.option-list .option.icon {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.option-list .option .icon-tick {
+  color: green;
+  background: rgb(212, 209, 209);
+}
+
+.option-list .option .icon-cross {
+  color: rgb(121, 3, 3);
 }
