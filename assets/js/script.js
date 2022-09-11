@@ -1,4 +1,4 @@
-console.log("hello, world!");
+var startButton = document.querySelector(".start-button");
 
 // global declarations
 const questions = [];

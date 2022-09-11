@@ -20,3 +20,56 @@ header {
   margin: 30px;
   padding: 30px;
 }
+
+.questions-container {
+  background-color: rgb(14, 127, 88);
+  border-radius: 30px;
+  margin: 30px;
+  height: 200px;
+  text-align: center;
+  font-size: 30px;
+  color: aliceblue;
+  font-style: bold;
+}
+
+.answers-container {
+  background-color: rgb(18, 195, 65);
+  border-radius: 30px;
+  margin: 30px;
+  height: 400px;
+  text-align: center;
+  font-size: 30px;
+  color: aliceblue;
+  font-style: bold;
+}
+
+.timer-container {
+  background-color: rgb(103, 23, 200);
+  border-radius: 30px;
+  margin: 30px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  font-size: 30px;
+  color: aliceblue;
+  font-style: bold;
+}
+
+.score-button {
+  background-color: rgb(172, 42, 166);
+  border-radius: 30px;
+  margin: 30px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font-size: 20px;
+  color: aliceblue;
+  font-style: bold;
+}
+
+.timer-and-button {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
