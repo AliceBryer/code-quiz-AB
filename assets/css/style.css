@@ -3,7 +3,7 @@ header {
   border-radius: 30px;
 }
 
-.title {
+#start-section {
   font-size: 50px;
   font-weight: 800;
   color: rgb(154, 5, 5);
@@ -12,7 +12,7 @@ header {
   text-align: center;
 }
 
-.start-button {
+#start-button {
   font-size: 30px;
   border-radius: 20px;
   background-color: rgb(138, 9, 9);
