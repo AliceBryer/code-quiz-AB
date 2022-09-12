@@ -105,6 +105,7 @@ function startTimer(time) {
 }
 
 function gameOver() {
+  console.log("game over");
   quizBox.classList.remove("activeQuiz");
   infoBox.classList.remove("activeInfo");
 }
