@@ -42,7 +42,7 @@ nextButton.onclick = () => {
     queCount++;
     showQuestions(queCount);
   } else {
-    console.log("questions completed");
+    gameOver();
   }
 };
 
@@ -102,4 +102,9 @@ function startTimer(time) {
     timeCount.textContent = time;
     time--;
   }
+}
+
+function gameOver() {
+  quizBox.classList.remove("activeQuiz");
+  infoBox.classList.remove("activeInfo");
 }
