@@ -8,7 +8,7 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const timer = document.querySelector("header .timer");
 const timeText = document.querySelector(".timer .time-txt");
-const timeCount = document.querySelector(".timer .timer-sec");
+const timeCount = quizBox.querySelector(".timer .timer-sec");
 const queText = document.querySelector(".que-text");
 const optionList = document.querySelector(".option-list");
 const nextButton = document.querySelector(".next-button");
@@ -31,10 +31,11 @@ continueButton.onclick = () => {
   infoBox.classList.remove("activeInfo");
   quizBox.classList.add("activeQuiz");
   showQuestions(0);
+  startTimer(60);
 };
 
 let queCount = 0;
-// let counter
+let counter;
 
 nextButton.onclick = () => {
   if (queCount < questions.length - 1) {
@@ -92,6 +93,13 @@ function optionSelected(answer) {
   for (let i = 0; i < allOptions; i++) {
     optionList.children[i].classList.add(".disabled");
   }
-};
+}
 
-function startTimer(){
+function startTimer(time) {
+  counter = setInterval(timer, 1000);
+
+  function timer() {
+    timeCount.textContent = time;
+    time--;
+  }
+}
