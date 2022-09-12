@@ -5,13 +5,13 @@ const infoBox = document.querySelector(".info-box");
 const exitButton = infoBox.querySelector(".buttons .quit");
 const continueButton = infoBox.querySelector(".buttons .restart");
 const quizBox = document.querySelector(".quiz-box");
-// const resultBox = document.querySelector(".result-box");
-// const optionList = document.querySelector(".option-list");
-// const timer = document.querySelector("header .timer");
-// const timeText = document.querySelector(".timer .time-txt");
-// const timeCount = document.querySelector(".timer .timer-sec");
+const resultBox = document.querySelector(".result-box");
+const timer = document.querySelector("header .timer");
+const timeText = document.querySelector(".timer .time-txt");
+const timeCount = document.querySelector(".timer .timer-sec");
 const queText = document.querySelector(".que-text");
 const optionList = document.querySelector(".option-list");
+const nextButton = document.querySelector(".next-button");
 
 //  Start quiz button clicked
 
@@ -34,9 +34,24 @@ continueButton.onclick = () => {
 };
 
 let queCount = 0;
+// let counter
+
+nextButton.onclick = () => {
+  if (queCount < questions.length - 1) {
+    queCount++;
+    showQuestions(queCount);
+  } else {
+    console.log("questions completed");
+  }
+};
 
 function showQuestions(index) {
-  let queTag = "<span>" + questions[index].question + "</span>";
+  let queTag =
+    "<span>" +
+    questions[index].number +
+    ". " +
+    questions[index].question +
+    "</span>";
   queText.innerHTML = queTag;
   let optionTag =
     '<div class="option"><span>' +
@@ -53,4 +68,30 @@ function showQuestions(index) {
     "</span></div>";
 
   optionList.innerHTML = optionTag;
+  const option = optionList.querySelectorAll(".option");
+  for (let i = 0; i < option.length; i++) {
+    option[i].setAttribute("onclick", "optionSelected(this)");
+  }
 }
+
+function optionSelected(answer) {
+  let userAns = answer.textContent;
+  let correctAns = questions[queCount].answer;
+  let allOptions = optionList.children.length;
+
+  if (userAns === correctAns) {
+    answer.classList.add("correct");
+    console.log("answer is correct");
+  } else {
+    answer.classList.add("incorrect");
+    console.log("Answer is incorrect");
+  }
+
+  // disabling selections once user has picked choice
+
+  for (let i = 0; i < allOptions; i++) {
+    optionList.children[i].classList.add(".disabled");
+  }
+};
+
+function startTimer(){

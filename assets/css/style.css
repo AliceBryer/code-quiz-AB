@@ -224,6 +224,19 @@ section .option-list .option:hover {
   color: rgb(121, 3, 3);
 }
 
+.optionList .option.correct {
+  color: rgb(0, 0, 0);
+  background: rgb(81, 181, 53);
+}
+.optionList .option.incorrect {
+  color: rgb(0, 0, 0);
+  background: rgb(164, 64, 64);
+}
+
+.optionList .option.disabled {
+  pointer-events: none;
+}
+
 .quiz-box footer {
   height: 60px;
   width: 100%;
@@ -231,20 +244,6 @@ section .option-list .option:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.quiz-box footer .total-question span {
-  display: flex;
-  user-select: none;
-}
-
-footer .total-question span p {
-  font-weight: 500;
-  padding: 0 5px;
-}
-
-footer .total-question span p:first-child {
-  padding-left: 0px;
 }
 
 footer .next-button {
